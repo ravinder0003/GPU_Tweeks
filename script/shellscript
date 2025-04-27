@@ -5,7 +5,7 @@
 ##########################################################################################
 
 # Set GPU Governor to Performance
-# echo performance > /sys/kernel/gpu/gpu_governor
+echo performance > /sys/kernel/gpu/gpu_governor
 # Disable throttling
 echo 0 > /sys/class/kgsl/kgsl-3d0/throttling
 echo 1 > /sys/class/kgsl/kgsl-3d0/force_clk_on
