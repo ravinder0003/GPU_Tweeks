@@ -4,10 +4,10 @@
 # Telegram : @algorithmdev by Kreapic
 ##########################################################################################
 
-sleep 10
 # Set GPU Governor to Performance
 echo performance > /sys/kernel/gpu/gpu_governor
 # Disable throttling
-echo 0 > /sys/class/kgsl/kgsl-3d0/max_gpuclk
-echo 1 > /sys/class/kgsl/kgsl-3d0/force_clk_on
 echo 0 > /sys/class/kgsl/kgsl-3d0/throttling
+echo 1 > /sys/class/kgsl/kgsl-3d0/force_clk_on
+echo 0 > /sys/class/kgsl/kgsl-3d0/thermal_pwrlevel
+echo 3 > /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost
